@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'inter';
-    src: url('@/assets/fonts/Inter/assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf');
+    src: url('../fonts/Inter/assets/fonts/Inter/InterVariable.ttf');
 }
 
 @font-face {
