@@ -10,8 +10,5 @@ export default defineNuxtConfig({
   alias: {
     '@root': __dirname,
   },
-  generate: {
-    fallback: true
-  }
 })
 
