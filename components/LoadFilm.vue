@@ -1,4 +1,5 @@
 <template>
+  <!-- Process API data in HTML rendering  -->
   <div class="flex flex-col">
     <img v-if="movie.backdrop_path" :src="'https://www.themoviedb.org/t/p/original/' + movie.backdrop_path" :alt="movie.title + ' poster'"
       class="object-cover w-screen h-auto lg:h-[500px] xl:self-center">
@@ -134,12 +135,14 @@ export default {
   },
   methods: {
     getReleaseYear(date) {
+      // Get release year from date string
       if (date) {
         return date.substring(0, 4);
       }
       return '';
     },
     formatCurrency(value) {
+      // Format currency to USD for rendering film budget
       const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
@@ -148,6 +151,7 @@ export default {
     }
   },
   mounted() {
+    // Fetch film data from API by ID from component props
     axios
       .get(`https://api.themoviedb.org/3/movie/${this.film_id}?api_key=${getKey()}`)
       .then(response => {
@@ -157,6 +161,7 @@ export default {
         console.error(error);
       });
 
+    // Fetch additional filmcrew data
     axios
       .get(`https://api.themoviedb.org/3/movie/${this.film_id}/credits?api_key=${getKey()}`)
       .then(response => {

@@ -62,6 +62,7 @@ export default {
   },
   methods: {
     handleInput() {
+      // Fetch film data from TMDB API, requests new data after each update of 'searchQuery'
       axios
         .get(`https://api.themoviedb.org/3/search/movie?api_key=${getKey()}&query=${this.searchQuery}`)
         .then(response => {
@@ -72,6 +73,7 @@ export default {
         })
     },
     getReleaseYear(date) {
+      // Get release year from date string
       if (date) {
         return date.substring(0, 4)
       }

@@ -1,4 +1,5 @@
 <template>
+  <!-- Process API data in HTML rendering -->
   <div>
     <div class="flex flex-row p-4 font-[inter]">
       <img :src="'https://image.tmdb.org/t/p/w500' + person.profile_path" :alt="'Picture of ' + person.name" class="w-[113px] h-[170px] rounded-xl shadow-2xl">
@@ -38,6 +39,7 @@ export default {
     };
   },
   mounted() {
+    // Fetch crew data from API by ID from component props
     axios
       .get(`https://api.themoviedb.org/3/person/${this.person_id}?api_key=${getKey()}`)
       .then(response => {
@@ -50,6 +52,7 @@ export default {
   },
   methods: {
     calculateAge(birthday) {
+      // Calculate age from birthday string
       const birthDate = new Date(birthday);
       const currentDate = new Date();
       let age = currentDate.getFullYear() - birthDate.getFullYear();

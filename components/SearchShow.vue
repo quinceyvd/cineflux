@@ -42,6 +42,7 @@ export default {
     },
     methods: {
         handleInput() {
+        // Fetch TV data from TMDB API, requests new data after each update of 'searchQuery'
             axios
                 .get(`https://api.themoviedb.org/3/search/tv?api_key=${getKey()}&query=${this.searchQuery}`)
                 .then(response => {
@@ -52,6 +53,7 @@ export default {
                 });
         },
         getAirYear(date) {
+        // Get release year from date string
             if (date) {
                 return date.substring(0, 4);
             }
