@@ -8,7 +8,7 @@ Cineflux is a web application that allows users to explore information about mov
 
 Please note that Cineflux is under active development, and core features such as user authentication, logging, and rating/reviewing are actively being worked on. This README provides a brief overview of the application, its setup, and how to use it.
 
-## Features
+## ⚙️ Features
 
 As of the current version, Cineflux offers the following features:
 
@@ -16,7 +16,7 @@ As of the current version, Cineflux offers the following features:
 - View details about cast and crew members.
 - Search for movies, TV shows and cast/crew members.
 
-## Usage
+## 🍿 Usage
 
 Cineflux is designed to be intuitive and user-friendly. Here's how to use the application:
 
@@ -52,7 +52,7 @@ Cineflux is built with the following technologies and libraries:
 
 ## 🔗 Production deployment
 
-Check out the live production version by clicking [here](https://cineflux.vercel.app).
+Check out the live production version (main branch) by clicking [here](https://cineflux.vercel.app).
 
 ## ⬇️ Installation
 
@@ -61,9 +61,8 @@ To run Cineflux locally on your machine, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/quinceyvd/cineflux
+   git clone git@github.com:quinceyvd/cineflux.git
    ```
-
 2. Install required dependencies:
    ```bash
    npm install
@@ -71,9 +70,9 @@ To run Cineflux locally on your machine, follow these steps:
 3. Create a TMDB API key
    - Visit the TMDB website and create an account.
    - Generate an API key in your TMDB account settings.
-   - Store the API key in a .env file stored in the root directory like this: `API_KEY: <key>`
+   - Store the API key in a `.env` file located in the root directory, like this: `API_KEY: <key>`
 4. Start the development server
    ```bash
    npm run dev
    ```
-   You can now view Cineflux locally by visiting `localhost:3000` in the browser.
+   You can now access Cineflux locally by visiting `localhost:3000` in the browser.
