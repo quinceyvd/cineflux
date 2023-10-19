@@ -18,7 +18,6 @@
         <SearchCrew v-if="currentSearchType == 'crew'" class="m-5" />
     </div>
 </template>
-
 <script>
 // Import searching components and custom fonts
 import SearchFilm from '@/components/SearchFilm.vue';

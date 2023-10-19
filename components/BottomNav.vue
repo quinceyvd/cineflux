@@ -7,6 +7,9 @@
         <button @click="$router.push('/')" class="font-bold p-2 self-center justify-between">
             <Icon name="mingcute:home-5-line" size="30" class="text-white hover:text-blue-400 ease-in-out duration-200" />
         </button>
+        <button @click="$router.push('/about')" class="p-2 self-center justify-between">
+            <Icon name="mingcute:balance-line" size="30" class="text-white hover:text-blue-400 ease-in-out duration-200" />
+        </button>
     </div>
 </template>
   
