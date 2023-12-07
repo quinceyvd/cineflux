@@ -118,12 +118,8 @@
 <script>
 import axios from 'axios'
 import '@/assets/css/fonts.css'
+import { getKey } from '@/components/functions/getKey.js'
 
-export const getKey = () => {
-    const config = useRuntimeConfig();
-    const API_KEY = config.public.apiKey
-    return API_KEY
-}
 function getCreatorNames(creators) {
     // Handling cases of multiple show creators
     if (creators.length > 1) {

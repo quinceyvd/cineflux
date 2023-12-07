@@ -1,11 +1,9 @@
 <template>
     <div class="flex flex-row self-center justify-between p-5">
         <!-- Toggle menu for search types -->
-        <button v-bind:class="(currentSearchType=='film')?'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 hover:border-blue-500':'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 border-b-white hover:border-blue-500'" @click="toggleSearchType('film')">films</button>
-        <p class="text-xl text-gray-300 py-2">|</p>
-        <button v-bind:class="(currentSearchType=='tv')?'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 hover:border-blue-500':'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 border-b-white hover:border-blue-500'" @click="toggleSearchType('tv')">tv</button>
-        <p class="text-xl text-gray-300 py-2">|</p>
-        <button v-bind:class="(currentSearchType=='crew')?'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 hover:border-blue-500':'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 border-b-white hover:border-blue-500'" @click="toggleSearchType('crew')">crew</button>
+        <button v-bind:class="(currentSearchType=='film')?'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 hover:border-blue-500':'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 border-b-white hover:border-blue-500'" @click="toggleSearchType('film')"><Icon name="mdi:movie-open" size="30" /></button>
+        <button v-bind:class="(currentSearchType=='tv')?'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 hover:border-blue-500':'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 border-b-white hover:border-blue-500'" @click="toggleSearchType('tv')"><Icon name="mdi:television-classic" size="30" /></button>
+        <button v-bind:class="(currentSearchType=='crew')?'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 hover:border-blue-500':'text-xl font-[inter] font-bold mx-2 p-2 ease-in-out duration-200 border-b-4 border-b-white hover:border-blue-500'" @click="toggleSearchType('crew')"><Icon name="mdi:account" size="30" /></button>
     </div>
     <div class="flex flex-col justify-between">
         <!--

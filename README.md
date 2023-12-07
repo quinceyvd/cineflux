@@ -1,8 +1,4 @@
-<div style="display: flex; flex-direction: column; align-items: center;">
-<a href="https://cineflux.vercel.app">
-  <h1 style="display: inline-block; border-radius: 0.5rem; padding: 0.5rem; margin-top: 2.5rem; font-size: 3rem; color: white; font-family: 'IBM Plex Mono', monospace; transition: all 0.3s ease-in-out; background-color: #1F1F1F; margin-bottom: 40px;">cineflux.</h1>
-  </a>
-</div>
+# Cineflux
 
 Cineflux is a web application that allows users to explore information about movies, TV shows, and their respective cast and crew. The web-app is built using Vue.js & Nuxt, and utilizes The Movie Database (TMDB) API, enabling users to view details about their favorite films and TV series, as well as the people behind them. Additionally, Cineflux provides the functionality to log and rate/review movies and TV shows.
 

@@ -1,7 +1,7 @@
 <template>
     <div class="self-center m-0 xl:w-10/12">
         <div class="flex items-center justify-center flex-col">
-            <input type="text" v-model="searchQuery" @input="handleInput" id="searchBox" placeholder="Search TV show..." class="flex text-xl text-left font-[inter] font-bold p-3 ease-in-out duration-200 border-4 rounded-3xl border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:ring-opacity-50 hover:ring-1 hover:ring-blue-500 hover:ring-opacity-50" />
+            <input type="text" v-model="searchQuery" @input="handleInput" id="searchBox" placeholder="Search TV show..." class="flex text-xl text-left font-[ibmplexmono] uppercase font-bold p-3 ease-in-out duration-200 border-4 rounded-2xl border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:ring-opacity-50 hover:ring-1 hover:ring-blue-500 hover:ring-opacity-50" />
         </div>
         <div class="bg-[#e0e0e0] mt-10 rounded-3xl shadow-2xl">
             <ul v-for="result in results" :key="result.id" class="py-5">
@@ -26,12 +26,8 @@
 
 <script>
 import axios from 'axios'
+import { getKey } from '@/components/functions/getKey.js'
 
-export const getKey = () => {
-    const config = useRuntimeConfig();
-    const API_KEY = config.public.apiKey
-    return API_KEY
-}
 
 export default {
     data() {

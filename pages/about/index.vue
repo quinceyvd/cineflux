@@ -1,6 +1,5 @@
 <template>
-    <div class="font-[inter] p-10 pb-[120px] xl:self-center xl:w-[700px]">
-        <Logo />
+    <div class="font-[inter] p-10 pb-[120px] xl:self-center xl:w-[700px] mt-16">
         <h2 class="text-xl font-bold mb-4">Features</h2>
         <ul class="list-disc list-inside ml-4 mb-4">
             <li>Display movie and TV show information.</li>
@@ -31,6 +30,5 @@
     </div>
 </template>
 <script>
-import Logo from '@/components/Logo.vue';
 import '@/assets/css/fonts.css'
 </script>
