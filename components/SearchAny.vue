@@ -5,7 +5,7 @@
         <div v-if="searchQuery"
             class="overflow-y-visible w-[300px] top-[81px] right-[20px] md:right-[50px] fixed bg-white rounded-xl pt-5 shadow-xl">
             <div class="flex flex-row items-center pb-4 space-between">
-                <NuxtLink to="/search" class="text-neutral-400 hover:underline ml-6">
+                <NuxtLink to="/search" class="text-neutral-400 hover:underline ml-6" @click="clearInput">
                     Go to detailed search...
                 </NuxtLink>
                 <button class="ml-14" @click="clearInput">
