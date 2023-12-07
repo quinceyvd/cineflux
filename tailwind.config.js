@@ -2,7 +2,12 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'bebasneue': ['Bebas Neue', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }

@@ -1,8 +1,9 @@
 <template>
     <!-- Process API data in HTML rendering -->
     <div class="flex flex-col">
-        <img :src="'https://www.themoviedb.org/t/p/original/' + show.backdrop_path" :alt="show.title + ' poster'"
+        <img v-if="show.backdrop_path" :src="'https://www.themoviedb.org/t/p/original/' + show.backdrop_path" :alt="show.title + ' poster'"
             class="object-cover w-screen h-auto lg:h-[500px] xl:self-center">
+        <div v-else class="pt-24 md:pt-28"></div>
         <div class="flex flex-row p-4 xl:justify-center">
             <div>
                 <img v-if="show.poster_path" :src="'https://image.tmdb.org/t/p/w500/' + show.poster_path"
@@ -118,12 +119,8 @@
 <script>
 import axios from 'axios'
 import '@/assets/css/fonts.css'
+import { getKey } from '@/components/functions/getKey.js'
 
-export const getKey = () => {
-    const config = useRuntimeConfig();
-    const API_KEY = config.public.apiKey
-    return API_KEY
-}
 function getCreatorNames(creators) {
     // Handling cases of multiple show creators
     if (creators.length > 1) {
