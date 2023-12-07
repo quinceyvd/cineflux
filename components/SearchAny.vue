@@ -18,7 +18,8 @@
             </div>
             <ul v-for="result in results" :key="result.id">
                 <li v-if="result.media_type === 'movie'" class="py-2 w-[300px]">
-                    <NuxtLink :to="`/film/${result.id}`" class="flex flex-row p-5 text-black hover:underline" @click="clearInput">
+                    <NuxtLink :to="`/film/${result.id}`" class="flex flex-row p-5 text-black hover:underline"
+                        @click="clearInput">
                         <img :src="'https://image.tmdb.org/t/p/w500' + result.poster_path"
                             :alt="'Poster of ' + result.title" class="w-10 h-auto">
                         <div class="ml-5">
@@ -28,7 +29,8 @@
                     </NuxtLink>
                 </li>
                 <li v-else-if="result.media_type === 'tv'" class="py-2 w-[300px]">
-                    <NuxtLink :to="`/show/${result.id}`" class="flex flex-row p-5 text-black hover:underline" @click="clearInput">
+                    <NuxtLink :to="`/show/${result.id}`" class="flex flex-row p-5 text-black hover:underline"
+                        @click="clearInput">
                         <img :src="'https://image.tmdb.org/t/p/w500' + result.poster_path" :alt="'Poster of ' + result.name"
                             class="w-10 h-auto">
                         <div class="ml-5">
@@ -38,10 +40,14 @@
                     </NuxtLink>
                 </li>
                 <li v-else-if="result.media_type === 'person'" class="py-2">
-                    <NuxtLink :to="`/crew/${result.id}`" class="flex flex-row p-5 text-black hover:underline" @click="clearInput">
+                    <NuxtLink :to="`/crew/${result.id}`" class="flex flex-row p-5 text-black hover:underline"
+                        @click="clearInput">
                         <img :src="'https://image.tmdb.org/t/p/w500' + result.profile_path"
                             :alt="'Poster of ' + result.name" class="w-10 h-auto">
-                            <p><span class="text-black font-bold ml-5">{{ result.name }}</span></p>
+                        <div class="ml-5">
+                            <p><span class="text-black font-bold">{{ result.name }}</span></p>
+                            <p v-if="result.known_for_department">{{ result.known_for_department }}</p>
+                        </div>
                     </NuxtLink>
                 </li>
             </ul>
