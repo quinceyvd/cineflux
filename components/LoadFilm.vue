@@ -2,8 +2,7 @@
   <!-- Process API data in HTML rendering  -->
   <div class="flex flex-col">
     <img v-if="movie.backdrop_path" :src="'https://www.themoviedb.org/t/p/original/' + movie.backdrop_path" :alt="movie.title + ' poster'"
-      class="object-cover w-screen h-auto lg:h-[500px] xl:self-center">
-    <div v-else class="pt-24 md:pt-28"></div>
+      class="object-cover object-top w-screen h-auto lg:h-[500px] xl:self-center">
     <div class="flex flex-row p-4 xl:justify-center">
       <div>
         <img v-if="movie.poster_path" :src="'https://image.tmdb.org/t/p/w500/' + movie.poster_path"
